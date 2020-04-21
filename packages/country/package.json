@@ -1,9 +1,0 @@
-{
-  "name": "@ins-js-monorepo/country",
-  "version": "0.0.2",
-  "description": "country helper",
-  "main": "index.js",
-  "author": "phuoc@insignia.vc",
-  "license": "MIT",
-  "gitHead": "b20c8b7cf4253085efdcc1745243b33345a3e962"
-}
