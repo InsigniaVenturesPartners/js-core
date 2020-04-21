@@ -1,0 +1,17 @@
+{
+  "name": "ins-js-monorepo",
+  "version": "1.0.0",
+  "workspaces": [
+     "packages/*"
+  ],
+  "description": "Insignia javascript monorepo",
+  "author": "phuoc@insignia.vc",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+   "publish": "lerna run tsc && lerna publish"
+ },
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}
