@@ -4,5 +4,16 @@
   "description": "Insignia javascript core",
   "author": "phuoc@insignia.vc",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/babel@7.0.4"
+    },
+    "componentsDefaultDirectory": "{name}",
+    "packageManager": "yarn"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.661.0",
+    "pg": "^8.0.3"
+  }
 }
