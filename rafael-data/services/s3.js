@@ -5,11 +5,12 @@ class S3 {
   constructor(bucket = null, region = null, params = {}) {
     this.region = region || process.env.DEFAULT_BUCKET_REGION
     this.bucket = bucket || process.env.DEFAULT_BUCKET
+
+    if (!this.bucket || !this.region) throw new Error('S3 Bucket & Region is required.')
     this.s3 = new _S3({ apiVersion: '2006-03-01', region: this.region })
 
     this.params = params
   }
-
 
   contentType(contentType, filename) {
     this.params = {
@@ -77,7 +78,6 @@ class S3 {
   }
 
   create(filePath, body, options = {}, acl = 'public-read') {
-    console.log('Copy to S3 : ' + filePath);
     const params = {
       Bucket: this.bucket,
       Key: filePath,

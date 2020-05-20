@@ -1,8 +1,8 @@
 import fs from 'fs'
-import request from 'request'
+import axios from 'axios'
 
 export default async function loadFile (fileUrl, local = false) {
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     if (local) {
       fs.readFile(fileUrl, (err, buffer) => {
         if (err) reject(err)
@@ -10,11 +10,13 @@ export default async function loadFile (fileUrl, local = false) {
         resolve(buffer)
       })
     } else {
-      request.get({ url: fileUrl, encoding: null }, (err, resp, buffer) => {
-        if (err) reject(err)
-
-        resolve(buffer)
-      })
+      try {
+        const response = await axios.get(fileUrl, { responseType: 'arraybuffer' })
+        const fileBuffer = Buffer.from(response.data, 'binary')
+        resolve(fileBuffer)
+      } catch (err) {
+        return reject(err)
+      }
     }
   })
 }
