@@ -181,6 +181,42 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "insignia.rafael-data/helpers/strings/case-conversion@0.0.1": {
+        "files": [
+            {
+                "relativePath": "rafael-data/helpers/strings/caseConversion.js",
+                "test": false,
+                "name": "caseConversion.js"
+            }
+        ],
+        "mainFile": "rafael-data/helpers/strings/caseConversion.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "insignia.rafael-data/helpers/strings/index@0.0.1": {
+        "files": [
+            {
+                "relativePath": "rafael-data/helpers/strings/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "rafael-data/helpers/strings/index.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "insignia.rafael-data/queries/base-query@0.0.1": {
+        "files": [
+            {
+                "relativePath": "rafael-data/queries/baseQuery.js",
+                "test": false,
+                "name": "baseQuery.js"
+            }
+        ],
+        "mainFile": "rafael-data/queries/baseQuery.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "insignia.rafael-data/services/s3@0.0.3": {
         "files": [
             {
