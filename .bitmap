@@ -181,7 +181,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/helpers/strings/case-conversion@0.0.1": {
+    "insignia.rafael-data/helpers/strings/case-conversion@0.0.2": {
         "files": [
             {
                 "relativePath": "rafael-data/helpers/strings/caseConversion.js",
@@ -193,7 +193,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/helpers/strings/index@0.0.1": {
+    "insignia.rafael-data/helpers/strings/index@0.0.2": {
         "files": [
             {
                 "relativePath": "rafael-data/helpers/strings/index.js",
@@ -205,7 +205,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/queries/base-query@0.0.1": {
+    "insignia.rafael-data/queries/base-query@0.0.2": {
         "files": [
             {
                 "relativePath": "rafael-data/queries/baseQuery.js",
