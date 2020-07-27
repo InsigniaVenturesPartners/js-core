@@ -37,6 +37,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "insignia.helpers/functions/set-env-from-config@0.0.1": {
+        "files": [
+            {
+                "relativePath": "helpers/functions/setEnvFromConfig.js",
+                "test": false,
+                "name": "setEnvFromConfig.js"
+            }
+        ],
+        "mainFile": "helpers/functions/setEnvFromConfig.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "insignia.helpers/functions/wait-for-random-between@0.0.1": {
         "files": [
             {
@@ -289,5 +301,5 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "version": "14.7.6"
+    "version": "14.8.8"
 }
