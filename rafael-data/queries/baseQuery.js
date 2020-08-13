@@ -37,6 +37,21 @@ export default class BaseQuery {
     return (await this.getBy(params, 1))[0] || null
   }
 
+  async create (data = {}) {
+    if (Object.keys(data).length <= 0) return null
+
+    const columnNames = Object.keys(data).map(colName => snakeCase(colName)).join(', ')
+    const sqlParams = Object.keys(data).map(columnName => data[columnName]) || []
+    const bindingValues = Array.from(Array(sqlParams.length), (_, i) => `$${i + 1}`)
+    const sql = `
+      INSERT INTO ${this.table} (${columnNames}, created_at, updated_at)
+      VALUES (${bindingValues.join(', ')}, NOW(), NOW())
+      RETURNING *
+    `
+
+    return (await Sql.execute(sql, sqlParams))[0]
+  }
+
   async update (id = null, updates = {}, where = {}) {
     const whereQry = []
     const sqlParams = []

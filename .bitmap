@@ -97,6 +97,30 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "insignia.rafael-data/errors/index@0.0.1": {
+        "files": [
+            {
+                "relativePath": "rafael-data/errors/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "rafael-data/errors/index.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "insignia.rafael-data/errors/report-error@0.0.1": {
+        "files": [
+            {
+                "relativePath": "rafael-data/errors/reportError.js",
+                "test": false,
+                "name": "reportError.js"
+            }
+        ],
+        "mainFile": "rafael-data/errors/reportError.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "insignia.rafael-data/helpers/functions/encode-rf-c5987-value-chars@0.0.1": {
         "files": [
             {
@@ -169,7 +193,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/helpers/print-log/index@0.0.1": {
+    "insignia.rafael-data/helpers/print-log/index@0.0.2": {
         "files": [
             {
                 "relativePath": "rafael-data/helpers/print-log/index.js",
@@ -193,7 +217,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/helpers/print-log/log-error@0.0.1": {
+    "insignia.rafael-data/helpers/print-log/log-error@0.0.2": {
         "files": [
             {
                 "relativePath": "rafael-data/helpers/print-log/logError.js",
@@ -253,7 +277,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/queries/base-query@0.0.2": {
+    "insignia.rafael-data/queries/base-query@0.0.4": {
         "files": [
             {
                 "relativePath": "rafael-data/queries/baseQuery.js",
@@ -277,7 +301,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/services/sql@0.0.1": {
+    "insignia.rafael-data/services/sql@0.0.2": {
         "files": [
             {
                 "relativePath": "rafael-data/services/sql.js",
