@@ -289,7 +289,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/services/s3@0.0.3": {
+    "insignia.rafael-data/services/s3@0.0.4": {
         "files": [
             {
                 "relativePath": "rafael-data/services/s3.js",

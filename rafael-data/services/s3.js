@@ -1,5 +1,6 @@
 import {S3 as _S3} from 'aws-sdk'
 import encodeRFC5987ValueChars from '../helpers/functions/encodeRFC5987ValueChars';
+import FileType from 'file-type';
 
 class S3 {
   constructor(bucket = null, region = null, params = {}) {
@@ -77,12 +78,15 @@ class S3 {
     return fileUrl
   }
 
-  create(filePath, body, options = {}, acl = 'public-read') {
+  async create(filePath, body, options = {}, acl = 'public-read') {
+    const fileTypeResult = (await FileType.fromBuffer(body).catch(_ => null))
     const params = {
       Bucket: this.bucket,
       Key: filePath,
       Body: body,
       ACL: acl,
+      ContentType: fileTypeResult ? fileTypeResult.mime : 'application/octet-stream',
+      ContentDisposition: 'inline',
       ...this.params,
       ...options
     }
