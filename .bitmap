@@ -145,7 +145,19 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/helpers/functions/index@0.0.4": {
+    "insignia.rafael-data/helpers/functions/get-linkedin-username@0.0.1": {
+        "files": [
+            {
+                "relativePath": "rafael-data/helpers/functions/getLinkedinUsername.js",
+                "test": false,
+                "name": "getLinkedinUsername.js"
+            }
+        ],
+        "mainFile": "rafael-data/helpers/functions/getLinkedinUsername.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "insignia.rafael-data/helpers/functions/index@0.0.5": {
         "files": [
             {
                 "relativePath": "rafael-data/helpers/functions/index.js",
