@@ -79,6 +79,7 @@ export default class BaseQuery {
     let sql = `UPDATE ${this.table} `
     sql += `SET ${updateColumnsQry.join(', ')} `
     sql += `WHERE ${whereQry.join(' AND ')} `
+    sql += `RETURNING *`
 
     return Sql.execute(sql, sqlParams)
   }

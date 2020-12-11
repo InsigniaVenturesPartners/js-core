@@ -4,6 +4,7 @@ import sleepRandomly from './sleepRandomly'
 import encodeRFC5987ValueChars from './encodeRFC5987ValueChars'
 import matchRegex from './matchRegex'
 import getLinkedinUsername from './getLinkedinUsername'
+import standardizeLinkedinUrl from './standardizeLinkedinUrl'
 
 export {
   getIPAddress,
@@ -11,5 +12,6 @@ export {
   sleepRandomly,
   encodeRFC5987ValueChars,
   matchRegex,
-  getLinkedinUsername
+  getLinkedinUsername,
+  standardizeLinkedinUrl
 }

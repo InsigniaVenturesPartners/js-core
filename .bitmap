@@ -157,7 +157,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/helpers/functions/index@0.0.5": {
+    "insignia.rafael-data/helpers/functions/index@0.0.7": {
         "files": [
             {
                 "relativePath": "rafael-data/helpers/functions/index.js",
@@ -202,6 +202,18 @@
             }
         ],
         "mainFile": "rafael-data/helpers/functions/sleep.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "insignia.rafael-data/helpers/functions/standardize-linkedin-url@0.0.2": {
+        "files": [
+            {
+                "relativePath": "rafael-data/helpers/functions/standardizeLinkedinUrl.js",
+                "test": false,
+                "name": "standardizeLinkedinUrl.js"
+            }
+        ],
+        "mainFile": "rafael-data/helpers/functions/standardizeLinkedinUrl.js",
         "origin": "AUTHORED",
         "exported": true
     },
@@ -289,7 +301,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/queries/base-query@0.0.4": {
+    "insignia.rafael-data/queries/base-query@0.0.5": {
         "files": [
             {
                 "relativePath": "rafael-data/queries/baseQuery.js",
