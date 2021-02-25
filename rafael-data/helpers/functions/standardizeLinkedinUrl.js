@@ -8,6 +8,7 @@ export default function standardizeLinkedinUrl(sourceUrl) {
     .replace(/^(?:https?:\/\/)?(?:www\.)?/i, "")
   url = url.replace("linkedin.com", "")
   const urlSplit = url.split("/")
+  if (!urlSplit[1]) return null
   if (urlSplit[1].trim() === "in" && urlSplit.length > 2) {
     return "https://www.linkedin.com/in/" + urlSplit[2].trim()
   }

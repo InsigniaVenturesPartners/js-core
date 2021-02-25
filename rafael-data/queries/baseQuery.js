@@ -84,6 +84,24 @@ export default class BaseQuery {
     return Sql.execute(sql, sqlParams)
   }
 
+  async delete (id = null, where = {}) {
+    const whereQry = []
+    const sqlParams = []
+
+    if (id) {
+      whereQry.push(`id = $${sqlParams.length + 1}`)
+      sqlParams.push(id)
+    } else if (Object.keys(where).length > 0) {
+      this.buildWhereQryAndParams(where, whereQry, sqlParams)
+    }
+
+    let sql = `DELETE FROM ${this.table} `
+    sql += `WHERE ${whereQry.join(' AND ')} `
+    sql += `RETURNING *`
+
+    return Sql.execute(sql, sqlParams)
+  }
+
   buildWhereQryAndParams (where = {}, whereQry = [], sqlParams = []) {
     Object.keys(where).map(key => {
       const columnName = snakeCase(key)

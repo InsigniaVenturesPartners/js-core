@@ -157,7 +157,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/helpers/functions/index@0.0.7": {
+    "insignia.rafael-data/helpers/functions/index@0.0.8": {
         "files": [
             {
                 "relativePath": "rafael-data/helpers/functions/index.js",
@@ -205,7 +205,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/helpers/functions/standardize-linkedin-url@0.0.2": {
+    "insignia.rafael-data/helpers/functions/standardize-linkedin-url@0.0.3": {
         "files": [
             {
                 "relativePath": "rafael-data/helpers/functions/standardizeLinkedinUrl.js",
@@ -301,7 +301,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/queries/base-query@0.0.5": {
+    "insignia.rafael-data/queries/base-query@0.0.6": {
         "files": [
             {
                 "relativePath": "rafael-data/queries/baseQuery.js",
