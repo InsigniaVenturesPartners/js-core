@@ -95,9 +95,17 @@ export default class BaseQuery {
       this.buildWhereQryAndParams(where, whereQry, sqlParams)
     }
 
-    let sql = `DELETE FROM ${this.table} `
-    sql += `WHERE ${whereQry.join(' AND ')} `
-    sql += `RETURNING *`
+    let sql
+    if (this.softDeletes) {
+      sql  = `UPDATE ${this.table} `
+      sql += `SET deleted_at = NOW() `
+      sql += `WHERE ${whereQry.join(' AND ')} `
+      sql += `RETURNING *`
+    } else {
+      sql  = `DELETE FROM ${this.table} `
+      sql += `WHERE ${whereQry.join(' AND ')} `
+      sql += `RETURNING *`
+    }
 
     return Sql.execute(sql, sqlParams)
   }
