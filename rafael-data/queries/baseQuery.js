@@ -7,13 +7,14 @@ export default class BaseQuery {
     this.table = 'table_name'
     this.caseInsensitiveColumns = []
     this.softDeletes = false
+    this.timestamps = true
   }
 
   async all (id) {
     let sql = `SELECT * FROM ${this.table} `
     if (this.softDeletes) sql += `WHERE deleted_at IS NULL `
 
-    return (await Sql.execute(sql, []))[0]
+    return (await Sql.execute(sql, []))
   }
 
   async findByID (id) {
@@ -37,17 +38,28 @@ export default class BaseQuery {
     return (await this.getBy(params, 1))[0] || null
   }
 
-  async create (data = {}) {
+  async create (data = {}, { onConflictQry = null } = {}) {
     if (Object.keys(data).length <= 0) return null
 
-    const columnNames = Object.keys(data).map(colName => snakeCase(colName)).join(', ')
+    const columnNames = Object.keys(data).map(colName => snakeCase(colName))
     const sqlParams = Object.keys(data).map(columnName => data[columnName]) || []
     const bindingValues = Array.from(Array(sqlParams.length), (_, i) => `$${i + 1}`)
-    const sql = `
-      INSERT INTO ${this.table} (${columnNames}, created_at, updated_at)
-      VALUES (${bindingValues.join(', ')}, NOW(), NOW())
-      RETURNING *
+    if (!columnNames.includes('created_at') && this.timestamps) {
+      columnNames.push('created_at')
+      bindingValues.push('NOW()')
+    }
+    if (!columnNames.includes('updated_at') && this.timestamps) {
+      columnNames.push('updated_at')
+      bindingValues.push('NOW()')
+    }
+    let sql = `
+      INSERT INTO ${this.table} (${columnNames.join(', ')})
+      VALUES (${bindingValues.join(', ')}) 
     `
+    if (onConflictQry) {
+      sql += `ON CONFLICT ${onConflictQry} `
+    }
+    sql += `RETURNING * `
 
     return (await Sql.execute(sql, sqlParams))[0]
   }

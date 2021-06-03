@@ -301,7 +301,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/queries/base-query@0.0.7": {
+    "insignia.rafael-data/queries/base-query@0.0.13": {
         "files": [
             {
                 "relativePath": "rafael-data/queries/baseQuery.js",
