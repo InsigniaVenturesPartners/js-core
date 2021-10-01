@@ -1,4 +1,4 @@
-import logInfo from "../../rafael-data/helpers/print-log/logInfo";
+import logInfo from "../print-log/logInfo";
 
 export default async function withRetry (fn, {
   altFn = null,

@@ -13,7 +13,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.helpers/functions/index@0.0.7": {
+    "insignia.helpers/functions/index@0.0.8": {
         "files": [
             {
                 "relativePath": "helpers/functions/index.js",
@@ -61,7 +61,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.helpers/functions/with-retry@0.0.1": {
+    "insignia.helpers/functions/with-retry@0.0.2": {
         "files": [
             {
                 "relativePath": "helpers/functions/withRetry.js",
@@ -73,7 +73,67 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.helpers/string/index@0.0.1": {
+    "insignia.helpers/print-log/index@0.0.1": {
+        "files": [
+            {
+                "relativePath": "helpers/print-log/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "helpers/print-log/index.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "insignia.helpers/print-log/log-danger@0.0.1": {
+        "files": [
+            {
+                "relativePath": "helpers/print-log/logDanger.js",
+                "test": false,
+                "name": "logDanger.js"
+            }
+        ],
+        "mainFile": "helpers/print-log/logDanger.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "insignia.helpers/print-log/log-error@0.0.1": {
+        "files": [
+            {
+                "relativePath": "helpers/print-log/logError.js",
+                "test": false,
+                "name": "logError.js"
+            }
+        ],
+        "mainFile": "helpers/print-log/logError.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "insignia.helpers/print-log/log-info@0.0.1": {
+        "files": [
+            {
+                "relativePath": "helpers/print-log/logInfo.js",
+                "test": false,
+                "name": "logInfo.js"
+            }
+        ],
+        "mainFile": "helpers/print-log/logInfo.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "insignia.helpers/print-log/log-magenta@0.0.1": {
+        "files": [
+            {
+                "relativePath": "helpers/print-log/logMagenta.js",
+                "test": false,
+                "name": "logMagenta.js"
+            }
+        ],
+        "mainFile": "helpers/print-log/logMagenta.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "insignia.helpers/string/index@0.0.3": {
         "files": [
             {
                 "relativePath": "helpers/string/index.js",
@@ -85,19 +145,19 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.helpers/string/serialize-query-string@0.0.1": {
+    "insignia.helpers/string/serialize-query-string@0.0.3": {
         "files": [
             {
-                "relativePath": "helpers/string/loadFile.js",
+                "relativePath": "helpers/string/serializeQueryString.js",
                 "test": false,
-                "name": "loadFile.js"
+                "name": "serializeQueryString.js"
             }
         ],
-        "mainFile": "helpers/string/loadFile.js",
+        "mainFile": "helpers/string/serializeQueryString.js",
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/errors/index@0.0.1": {
+    "insignia.rafael-data/errors/index@0.0.2": {
         "files": [
             {
                 "relativePath": "rafael-data/errors/index.js",
@@ -109,7 +169,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/errors/report-error@0.0.1": {
+    "insignia.rafael-data/errors/report-error@0.0.2": {
         "files": [
             {
                 "relativePath": "rafael-data/errors/reportError.js",
@@ -217,7 +277,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/helpers/print-log/index@0.0.2": {
+    "insignia.rafael-data/helpers/print-log/index@0.0.3": {
         "files": [
             {
                 "relativePath": "rafael-data/helpers/print-log/index.js",
@@ -229,7 +289,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/helpers/print-log/log-danger@0.0.1": {
+    "insignia.rafael-data/helpers/print-log/log-danger@0.0.2": {
         "files": [
             {
                 "relativePath": "rafael-data/helpers/print-log/logDanger.js",
@@ -241,7 +301,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/helpers/print-log/log-error@0.0.2": {
+    "insignia.rafael-data/helpers/print-log/log-error@0.0.3": {
         "files": [
             {
                 "relativePath": "rafael-data/helpers/print-log/logError.js",
@@ -253,7 +313,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/helpers/print-log/log-info@0.0.1": {
+    "insignia.rafael-data/helpers/print-log/log-info@0.0.2": {
         "files": [
             {
                 "relativePath": "rafael-data/helpers/print-log/logInfo.js",
@@ -265,7 +325,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/helpers/print-log/log-magenta@0.0.1": {
+    "insignia.rafael-data/helpers/print-log/log-magenta@0.0.2": {
         "files": [
             {
                 "relativePath": "rafael-data/helpers/print-log/logMagenta.js",
@@ -301,7 +361,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/queries/base-query@0.0.13": {
+    "insignia.rafael-data/queries/base-query@0.1.2": {
         "files": [
             {
                 "relativePath": "rafael-data/queries/baseQuery.js",
@@ -310,6 +370,18 @@
             }
         ],
         "mainFile": "rafael-data/queries/baseQuery.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "insignia.rafael-data/secret/secret@0.0.3": {
+        "files": [
+            {
+                "relativePath": "rafael-data/secret/secret.js",
+                "test": false,
+                "name": "secret.js"
+            }
+        ],
+        "mainFile": "rafael-data/secret/secret.js",
         "origin": "AUTHORED",
         "exported": true
     },
@@ -325,7 +397,19 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "insignia.rafael-data/services/sql@0.0.2": {
+    "insignia.rafael-data/services/secret-manager@0.0.2": {
+        "files": [
+            {
+                "relativePath": "rafael-data/services/secret-manager.js",
+                "test": false,
+                "name": "secret-manager.js"
+            }
+        ],
+        "mainFile": "rafael-data/services/secret-manager.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "insignia.rafael-data/services/sql@0.1.2": {
         "files": [
             {
                 "relativePath": "rafael-data/services/sql.js",
