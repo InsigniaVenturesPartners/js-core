@@ -8,27 +8,31 @@ export default class BaseQuery {
     this.caseInsensitiveColumns = []
     this.softDeletes = false
     this.timestamps = true
+    this.automaticTransformColumn = true
+    this.createdAtColumn = 'created_at'
+    this.updatedAtColumn = 'updated_at'
+    this.deletedAtColumn = 'deleted_at'
   }
 
   async all (id) {
-    let sql = `SELECT * FROM ${this.table} `
-    if (this.softDeletes) sql += `WHERE deleted_at IS NULL `
+    let sql = `SELECT * FROM "${this.table}" `
+    if (this.softDeletes) sql += `WHERE "${this.deletedAtColumn}" IS NULL `
 
     return (await Sql.execute(sql, []))
   }
 
   async findByID (id) {
-    let sql = `SELECT * FROM ${this.table} WHERE id = $1 `
-    if (this.softDeletes) sql += `AND deleted_at IS NULL `
+    let sql = `SELECT * FROM "${this.table}" WHERE id = $1 `
+    if (this.softDeletes) sql += `AND "${this.deletedAtColumn}" IS NULL `
     return (await Sql.execute(sql, [id]))[0]
   }
 
   async getBy (where = {}, limit = null) {
     const { whereQry, sqlParams } = this.buildWhereQryAndParams(where)
 
-    let sql = `SELECT * FROM ${this.table} `
+    let sql = `SELECT * FROM "${this.table}" `
     if (whereQry.length > 0) sql += `WHERE ${whereQry.join(' AND ')} `
-    if (this.softDeletes) sql += `AND deleted_at IS NULL `
+    if (this.softDeletes) sql += `AND "${this.deletedAtColumn}" IS NULL `
     if (limit) sql += `LIMIT ${limit} `
 
     return Sql.execute(sql, sqlParams)
@@ -41,19 +45,19 @@ export default class BaseQuery {
   async create (data = {}, { onConflictQry = null } = {}) {
     if (Object.keys(data).length <= 0) return null
 
-    const columnNames = Object.keys(data).map(colName => snakeCase(colName))
+    const columnNames = Object.keys(data).map(colName => this.automaticTransformColumn ? snakeCase(colName) : colName)
     const sqlParams = Object.keys(data).map(columnName => data[columnName]) || []
     const bindingValues = Array.from(Array(sqlParams.length), (_, i) => `$${i + 1}`)
-    if (!columnNames.includes('created_at') && this.timestamps) {
-      columnNames.push('created_at')
+    if (!columnNames.includes(this.createdAtColumn) && this.timestamps) {
+      columnNames.push(this.createdAtColumn)
       bindingValues.push('NOW()')
     }
-    if (!columnNames.includes('updated_at') && this.timestamps) {
-      columnNames.push('updated_at')
+    if (!columnNames.includes(this.updatedAtColumn) && this.timestamps) {
+      columnNames.push(this.updatedAtColumn)
       bindingValues.push('NOW()')
     }
     let sql = `
-      INSERT INTO ${this.table} (${columnNames.join(', ')})
+      INSERT INTO "${this.table}" ("${columnNames.join('", "')}")
       VALUES (${bindingValues.join(', ')}) 
     `
     if (onConflictQry) {
@@ -69,7 +73,7 @@ export default class BaseQuery {
     const sqlParams = []
     const updateColumnsQry = []
     Object.keys(updates).map(key => {
-      const columnName = snakeCase(key)
+      const columnName = this.automaticTransformColumn ? snakeCase(key) : key
       const value = updates[key]
       if (this.isSqlSyntax(value)) {
         updateColumnsQry.push(`"${columnName}" = ${value}`)
@@ -88,7 +92,7 @@ export default class BaseQuery {
 
     if (updateColumnsQry.length === 0) return null
 
-    let sql = `UPDATE ${this.table} `
+    let sql = `UPDATE "${this.table}" `
     sql += `SET ${updateColumnsQry.join(', ')} `
     sql += `WHERE ${whereQry.join(' AND ')} `
     sql += `RETURNING *`
@@ -109,12 +113,12 @@ export default class BaseQuery {
 
     let sql
     if (this.softDeletes) {
-      sql  = `UPDATE ${this.table} `
-      sql += `SET deleted_at = NOW() `
+      sql  = `UPDATE "${this.table}" `
+      sql += `SET "${this.deletedAtColumn}" = NOW() `
       sql += `WHERE ${whereQry.join(' AND ')} `
       sql += `RETURNING *`
     } else {
-      sql  = `DELETE FROM ${this.table} `
+      sql  = `DELETE FROM "${this.table}" `
       sql += `WHERE ${whereQry.join(' AND ')} `
       sql += `RETURNING *`
     }
@@ -124,7 +128,7 @@ export default class BaseQuery {
 
   buildWhereQryAndParams (where = {}, whereQry = [], sqlParams = []) {
     Object.keys(where).map(key => {
-      const columnName = snakeCase(key)
+      const columnName = this.automaticTransformColumn ? snakeCase(key) : key
       const isPresent = Array.isArray(where[key]) ? where[key].length > 0 : !!where[key]
       if (isPresent) {
         if (Array.isArray(where[key])) {

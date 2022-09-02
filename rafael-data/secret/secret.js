@@ -14,12 +14,12 @@ class Secret {
 
   async initialize () {
     const conf = config.load(process.env.STAGE)
-    const secretPathObj = conf.SECRET_PATH || {}
+    const secretKeyToPathObj = conf.SECRET_KEY_TO_PATH || {}
 
     const secretManager = new SecretManager()
-    for (const secretKey of Object.keys(secretPathObj)) {
+    for (const secretKey of Object.keys(secretKeyToPathObj)) {
       logInfo(`Loading '${secretKey}' secret`)
-      const secretPath = secretPathObj[secretKey]
+      const secretPath = secretKeyToPathObj[secretKey]
       this[secretKey] = await secretManager.getSecret(secretPath)
     }
 
