@@ -1,9 +1,8 @@
 import { Pool } from 'pg'
-import { logDanger, logInfo, logMagenta } from '../helpers/print-log'
+import { logDanger, logInfo, logMagenta } from '@insigniateam/helpers.print-log'
 
-export default class Sql {
+export class Sql {
   static connectToDb () {
-    const isDev = process.env.STAGE === 'dev'
     return new Pool({
       host: process.env.PSQL_HOST,
       database: process.env.PSQL_DB,

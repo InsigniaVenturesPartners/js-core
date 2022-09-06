@@ -10,7 +10,7 @@
     /**
      * the name of the component workspace. used for development purposes.
      **/
-    "name": "my-workspace-name",
+    "name": "insignia",
     /**
      * set the icon to be shown on the Bit server.
      **/
@@ -23,7 +23,7 @@
      * scope - scope name only, e.g. 'compilation'.
      * owner - owner name in bit.dev, e.g. 'teambit'.
      **/
-    "defaultDirectory": "{scope}/{name}",
+    "defaultDirectory": "harmony/{scope}/{name}",
     /**
      * default scope for all components in workspace.
      **/

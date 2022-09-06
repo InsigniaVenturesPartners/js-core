@@ -1,4 +1,4 @@
-import logInfo from "../print-log/logInfo";
+import logInfo from "../../../harmony/helpers/print-log/log-info";
 
 export default async function withRetry (fn, {
   altFn = null,
