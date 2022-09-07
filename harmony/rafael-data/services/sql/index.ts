@@ -1,1 +1,3 @@
-export { Sql } from './sql';
+import Sql from './sql';
+
+export default Sql

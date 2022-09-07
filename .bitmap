@@ -9,15 +9,39 @@
  */
 
 {
+    "case-conversion": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "harmony/helpers/case-conversion"
+    },
     "print-log": {
         "scope": "insigniateam.helpers",
         "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "harmony/helpers/print-log"
     },
-    "services/sql": {
+    "queries/base-query": {
         "scope": "insigniateam.rafael-data",
         "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "harmony/rafael-data/queries/base-query"
+    },
+    "secret": {
+        "scope": "insigniateam.rafael-data",
+        "version": "1.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "harmony/rafael-data/secret"
+    },
+    "services/secret-manager": {
+        "scope": "insigniateam.rafael-data",
+        "version": "1.0.0",
+        "mainFile": "index.ts",
+        "rootDir": "harmony/rafael-data/services/secret-manager"
+    },
+    "services/sql": {
+        "scope": "insigniateam.rafael-data",
+        "version": "1.0.0",
         "mainFile": "index.ts",
         "rootDir": "harmony/rafael-data/services/sql"
     },

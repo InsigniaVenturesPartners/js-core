@@ -1,19 +1,22 @@
 import { Pool } from 'pg'
 import { logDanger, logInfo, logMagenta } from '@insigniateam/helpers.print-log'
+import Secret from "@insigniateam/rafael-data.secret"
 
-export class Sql {
-  static connectToDb () {
+export default class Sql {
+  static async connectToDb () {
+    const isDev = process.env.STAGE === 'dev'
+    const secret = await new Secret()
     return new Pool({
-      host: process.env.PSQL_HOST,
       database: process.env.PSQL_DB,
-      user: process.env.PSQL_USER,
-      password: process.env.PSQL_PWD,
-      port: process.env.PSQL_PORT
+      host: isDev ? process.env.PSQL_HOST : secret.data.db.host,
+      user: isDev ? process.env.PSQL_USER : secret.data.db.username,
+      password: isDev ? process.env.PSQL_PWD : secret.data.db.password,
+      port: isDev ? process.env.PSQL_PORT : secret.data.db.port
     })
   }
 
   static async execute (query, params = []) {
-    const db = this.connectToDb()
+    const db = await this.connectToDb()
 
     params = Array.isArray(params) ? params : [params]
 

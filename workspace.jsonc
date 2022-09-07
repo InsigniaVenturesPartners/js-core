@@ -10,7 +10,7 @@
     /**
      * the name of the component workspace. used for development purposes.
      **/
-    "name": "insignia",
+    "name": "insigniateam",
     /**
      * set the icon to be shown on the Bit server.
      **/
@@ -36,7 +36,7 @@
     /**
      * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
      */
-    "packageManager": "teambit.dependencies/pnpm",
+    "packageManager": "teambit.dependencies/yarn",
     "policy": {
       "dependencies": {},
       "peerDependencies": {}
