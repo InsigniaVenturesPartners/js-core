@@ -270,9 +270,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"base-query-7d822b@workspace:harmony/rafael-data/queries/base-query":
+"base-query-277753@workspace:rafael-data/queries/base-query":
   version: 0.0.0-use.local
-  resolution: "base-query-7d822b@workspace:harmony/rafael-data/queries/base-query"
+  resolution: "base-query-277753@workspace:rafael-data/queries/base-query"
   languageName: unknown
   linkType: soft
 
@@ -328,9 +328,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"case-conversion-4e086d@workspace:harmony/helpers/case-conversion":
+"case-conversion-b317c1@workspace:helpers/case-conversion":
   version: 0.0.0-use.local
-  resolution: "case-conversion-4e086d@workspace:harmony/helpers/case-conversion"
+  resolution: "case-conversion-b317c1@workspace:helpers/case-conversion"
   languageName: unknown
   linkType: soft
 
@@ -1328,9 +1328,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"print-log-91a826@workspace:harmony/helpers/print-log":
+"print-log-f369a8@workspace:helpers/print-log":
   version: 0.0.0-use.local
-  resolution: "print-log-91a826@workspace:harmony/helpers/print-log"
+  resolution: "print-log-f369a8@workspace:helpers/print-log"
   languageName: unknown
   linkType: soft
 
@@ -1471,15 +1471,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"secret-206bbc@workspace:harmony/rafael-data/secret":
+"secret-54d87a@workspace:rafael-data/secret":
   version: 0.0.0-use.local
-  resolution: "secret-206bbc@workspace:harmony/rafael-data/secret"
+  resolution: "secret-54d87a@workspace:rafael-data/secret"
   languageName: unknown
   linkType: soft
 
-"secret-manager-8ac369@workspace:harmony/rafael-data/services/secret-manager":
+"secret-manager-24c3c5@workspace:rafael-data/services/secret-manager":
   version: 0.0.0-use.local
-  resolution: "secret-manager-8ac369@workspace:harmony/rafael-data/services/secret-manager"
+  resolution: "secret-manager-24c3c5@workspace:rafael-data/services/secret-manager"
   languageName: unknown
   linkType: soft
 
@@ -1571,9 +1571,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sql-a8f696@workspace:harmony/rafael-data/services/sql":
+"sql-e35fff@workspace:rafael-data/services/sql":
   version: 0.0.0-use.local
-  resolution: "sql-a8f696@workspace:harmony/rafael-data/services/sql"
+  resolution: "sql-e35fff@workspace:rafael-data/services/sql"
   languageName: unknown
   linkType: soft
 
