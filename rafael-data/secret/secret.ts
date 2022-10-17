@@ -4,7 +4,7 @@ import { logInfo } from '@insigniateam/helpers.print-log'
 
 export default class Secret {
   private static instance
-  public data: Record<string, any>
+  public data: Record<string, any> = {}
 
   constructor () {
     // eslint-disable-next-line no-extra-boolean-cast

@@ -23,13 +23,13 @@
     },
     "queries/base-query": {
         "scope": "insigniateam.rafael-data",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "mainFile": "index.ts",
         "rootDir": "rafael-data/queries/base-query"
     },
     "secret": {
         "scope": "insigniateam.rafael-data",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "mainFile": "index.ts",
         "rootDir": "rafael-data/secret"
     },
@@ -41,7 +41,7 @@
     },
     "services/sql": {
         "scope": "insigniateam.rafael-data",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "mainFile": "index.ts",
         "rootDir": "rafael-data/services/sql"
     },
