@@ -23,7 +23,7 @@
     },
     "queries/base-query": {
         "scope": "insigniateam.rafael-data",
-        "version": "2.0.0",
+        "version": "2.0.1",
         "mainFile": "index.ts",
         "rootDir": "rafael-data/queries/base-query"
     },
