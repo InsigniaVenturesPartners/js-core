@@ -15,6 +15,48 @@
         "mainFile": "index.ts",
         "rootDir": "helpers/case-conversion"
     },
+    "encode-rfc5987-value-chars": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/encode-rfc5987-value-chars"
+    },
+    "errors": {
+        "scope": "insigniateam.rafael-data",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "rafael-data/errors"
+    },
+    "get-ip-address": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/get-ip-address"
+    },
+    "get-linkedin-username": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/get-linkedin-username"
+    },
+    "get-resolved-url": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/get-resolved-url"
+    },
+    "load-file": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/load-file"
+    },
+    "match-first-regex-group": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/match-first-regex-group"
+    },
     "print-log": {
         "scope": "insigniateam.helpers",
         "version": "0.0.2",
@@ -23,7 +65,7 @@
     },
     "queries/base-query": {
         "scope": "insigniateam.rafael-data",
-        "version": "2.0.1",
+        "version": "2.0.2",
         "mainFile": "index.ts",
         "rootDir": "rafael-data/queries/base-query"
     },
@@ -33,6 +75,18 @@
         "mainFile": "index.ts",
         "rootDir": "rafael-data/secret"
     },
+    "serialize-query-string": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/serialize-query-string"
+    },
+    "services/s3": {
+        "scope": "insigniateam.rafael-data",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "rafael-data/services/s3"
+    },
     "services/secret-manager": {
         "scope": "insigniateam.rafael-data",
         "version": "1.0.0",
@@ -41,9 +95,51 @@
     },
     "services/sql": {
         "scope": "insigniateam.rafael-data",
-        "version": "2.0.0",
+        "version": "2.0.1",
         "mainFile": "index.ts",
         "rootDir": "rafael-data/services/sql"
+    },
+    "set-env-from-config": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/set-env-from-config"
+    },
+    "sleep": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/sleep"
+    },
+    "sleep-randomly": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/sleep-randomly"
+    },
+    "standardize-linkedin-url": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/standardize-linkedin-url"
+    },
+    "utilities/country-code": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/utilities/country-code"
+    },
+    "wait-for-random-between": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/wait-for-random-between"
+    },
+    "with-retry": {
+        "scope": "insigniateam.helpers",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "helpers/with-retry"
     },
     "$schema-version": "15.0.0"
 }
